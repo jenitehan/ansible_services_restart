@@ -1,0 +1,22 @@
+---
+
+- name: Restart Apache
+  service:
+    name: apache2
+    state: restarted
+  tags:
+    - services_restart_apache
+
+- name: Restart MySQL
+  service:
+    name: mysql
+    state: restarted
+  tags:
+    - services_restart_mysql
+
+- name: Restart Fail2Ban
+  service:
+    name: fail2ban
+    state: restarted
+  tags:
+    - services_restart_fail2ban
